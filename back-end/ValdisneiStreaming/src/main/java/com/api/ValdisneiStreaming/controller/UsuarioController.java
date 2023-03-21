@@ -1,7 +1,7 @@
-package com.api.Valdisnei.controller;
+package com.api.ValdisneiStreaming.controller;
 
-import com.api.Valdisnei.model.UsuarioModel;
-import com.api.Valdisnei.repository.UsuarioRepository;
+import com.api.ValdisneiStreaming.model.UsuarioModel;
+import com.api.ValdisneiStreaming.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
-package com.api.Valdisnei.repository;
+package com.api.ValdisneiStreaming.repository;
 
-import com.api.Valdisnei.model.UsuarioModel;
+import com.api.ValdisneiStreaming.model.UsuarioModel;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

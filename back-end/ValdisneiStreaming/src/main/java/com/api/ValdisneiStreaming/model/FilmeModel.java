@@ -1,4 +1,4 @@
-package com.api.ValdisneiStreaming.model.filme;
+package com.api.ValdisneiStreaming.model;
 
 import com.api.ValdisneiStreaming.model.MidiasModel;
 import jakarta.persistence.*;

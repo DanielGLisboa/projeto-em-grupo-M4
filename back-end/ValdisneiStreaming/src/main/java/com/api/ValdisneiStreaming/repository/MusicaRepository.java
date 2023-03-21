@@ -1,6 +1,6 @@
 package com.api.ValdisneiStreaming.repository;
 
-import com.api.ValdisneiStreaming.model.musica.MusicaModel;
+import com.api.ValdisneiStreaming.model.MusicaModel;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

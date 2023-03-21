@@ -1,7 +1,7 @@
-package com.api.Valdisnei.controller;
+package com.api.ValdisneiStreaming.controller;
 
-import com.api.Valdisnei.model.ContaModel;
-import com.api.Valdisnei.repository.ContaRepository;
+import com.api.ValdisneiStreaming.model.ContaModel;
+import com.api.ValdisneiStreaming.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

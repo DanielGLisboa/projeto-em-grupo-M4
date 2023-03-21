@@ -1,7 +1,7 @@
 package com.api.ValdisneiStreaming.repository;
 
 
-import com.api.Valdisnei.model.PlaylistModel;
+import com.api.ValdisneiStreaming.model.PlaylistModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +16,7 @@ public interface PlaylistRepository extends CrudRepository <PlaylistModel, Integ
     List <PlaylistModel> findAll();
 
     // pegar uma playlist por codigo
-    PlaylistModel findByCodigo(int id);
+    PlaylistModel findById(int id);
 
     // remover uma playlist
     void delete (PlaylistModel playlist);
@@ -24,6 +24,4 @@ public interface PlaylistRepository extends CrudRepository <PlaylistModel, Integ
      // cadastrar ou alterar uma playlist
     PlaylistModel save (PlaylistModel playlist);
 
-
-    void delete(Optional<PlaylistModel> playlist);
 }

@@ -1,4 +1,4 @@
-package com.api.Valdisnei.model;
+package com.api.ValdisneiStreaming.model;
 
 import jakarta.persistence.*;
 

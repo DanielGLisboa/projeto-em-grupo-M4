@@ -1,4 +1,4 @@
-package com.api.ValdisneiStreaming.model.musica;
+package com.api.ValdisneiStreaming.model;
 
 
 import com.api.ValdisneiStreaming.model.MidiasModel;

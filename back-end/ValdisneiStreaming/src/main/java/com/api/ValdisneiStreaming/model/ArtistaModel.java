@@ -2,8 +2,7 @@ package com.api.ValdisneiStreaming.model;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name="Artista")
+@MappedSuperclass
 public class ArtistaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +14,9 @@ public class ArtistaModel {
     private String dataDeNascimento;
     @Column(name="genero")
     private String genero;
+
+    @Column(name="premiacao")
+    private String premiacao;
 
 
     public int getId() {
