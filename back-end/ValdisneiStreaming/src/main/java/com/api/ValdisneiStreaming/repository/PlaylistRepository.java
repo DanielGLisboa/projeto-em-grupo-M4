@@ -22,6 +22,6 @@ public interface PlaylistRepository extends CrudRepository <PlaylistModel, Integ
     void delete (PlaylistModel playlist);
     
      // cadastrar ou alterar uma playlist
-    PlaylistModel save (PlaylistModel playlist);
+    <PlaylistMod extends PlaylistModel> PlaylistMod save (PlaylistMod playlist);
 
 }

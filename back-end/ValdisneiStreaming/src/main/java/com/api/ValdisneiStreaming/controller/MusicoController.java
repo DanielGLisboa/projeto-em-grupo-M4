@@ -30,10 +30,17 @@ public class MusicoController {
         return acoes.findById(id);
     }
 
-    @RequestMapping(value = "/musico/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody void remover(@PathVariable int id){
-        MusicoModel musico = filtrar(id);
-        this.acoes.delete(musico);
+    @DeleteMapping("/musico/{id}")
+    public @ResponseBody String deletar(@PathVariable int id){
+
+        try {
+            MusicoModel musico = filtrar(id);
+            acoes.delete(musico);
+            return "Musico removido com sucesso.";
+        }catch (Exception error){
+            return "Falha ao remover musico: " + error.getMessage();
+        }
+
     }
 }
 

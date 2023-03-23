@@ -1,7 +1,14 @@
 package com.api.ValdisneiStreaming.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
 @MappedSuperclass
 public abstract class MidiasModel {
     @Id
@@ -10,6 +17,8 @@ public abstract class MidiasModel {
     private int id;
     @Column(name="titulo", nullable = false)
     private String Titulo;
+    @Column(name="capa", nullable = false)
+    private String capa;
 
     @Column(name="ano", nullable = false)
     private int ano;
@@ -20,21 +29,5 @@ public abstract class MidiasModel {
     @Column(name="duracao", nullable = false)
     private double duracao;
 
-    public int getId() {
-        return id;
-    }
-    public String getTitulo() {
-        return Titulo;
-    }
-
-
-    public int getAno() {
-        return ano;
-    }
-
-
-    public String getGenero() {
-        return genero;
-    }
 
 }

@@ -26,11 +26,17 @@ public class UsuarioController {
     }
 
     //Remover
-    @RequestMapping(value="/usuario/{codigo}", method = RequestMethod.DELETE)
-    public @ResponseBody void remover(@PathVariable String codigo){
-        UsuarioModel email = filtrar(codigo);
+    @DeleteMapping("/usuario/{email}")
+    public @ResponseBody String deletar(@PathVariable String email){
 
-        this.acoes.delete(email);
+        try {
+            UsuarioModel usuario = filtrar(email);
+            acoes.delete(usuario);
+            return "Usuario removido com sucesso.";
+        }catch (Exception error){
+            return "Falha ao remover usuario: " + error.getMessage();
+        }
+
     }
 
     //Cadastrar
