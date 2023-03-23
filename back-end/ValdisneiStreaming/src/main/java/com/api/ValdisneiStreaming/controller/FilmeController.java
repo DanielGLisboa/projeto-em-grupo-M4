@@ -53,4 +53,37 @@ public class FilmeController {
 
     }
 
+    @RequestMapping(value = "/filme/{id}" , method= RequestMethod.GET)
+    public @ResponseBody FilmeModel filtrar_por_id(@PathVariable int id){
+        return acoes.findById(id);
+    }
+
+
+    @RequestMapping(value="/filme", method = RequestMethod.POST)
+    public @ResponseBody FilmeModel cadastrar(@RequestBody FilmeModel filme){
+        return acoes.save(filme);
+    }
+
+
+
+    @RequestMapping(value="/filme", method = RequestMethod.PUT)
+    public @ResponseBody FilmeModel atualizar( @RequestBody FilmeModel filme){
+        return acoes.save(filme);
+    }
+
+
+
+    @DeleteMapping("/filme/{id}")
+    public @ResponseBody String deletar(@PathVariable int id){
+
+        try {
+            FilmeModel filme = filtrar_por_id(id);
+            acoes.delete(filme);
+            return "Filme removido com sucesso.";
+        }catch (Exception error){
+            return "Falha ao remover filme: " + error.getMessage();
+        }
+
+    }
+
 }

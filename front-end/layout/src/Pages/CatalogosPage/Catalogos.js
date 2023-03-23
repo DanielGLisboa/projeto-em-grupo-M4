@@ -19,13 +19,6 @@ export default function Catalogo() {
   }, films)
   
   
-    const [capaCards, setCapaCards] = useState([
-      {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-      {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-      {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-      {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-      {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-    ])
 
     const [series, setSeries] = useState([
         {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
