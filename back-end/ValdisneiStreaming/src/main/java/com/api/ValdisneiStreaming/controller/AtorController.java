@@ -30,9 +30,16 @@ public class AtorController {
         return acoes.findById(id);
     }
 
-    @RequestMapping(value = "/ator/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody void remover(@PathVariable int id){
-        AtorModel ator = filtrar(id);
-        this.acoes.delete(ator);
+    @DeleteMapping("/ator/{id}")
+    public @ResponseBody String deletar(@PathVariable int id){
+
+        try {
+            AtorModel ator = filtrar(id);
+            acoes.delete(ator);
+            return "Ator removido com sucesso.";
+        }catch (Exception error){
+            return "Falha ao remover ator: " + error.getMessage();
+        }
+
     }
 }

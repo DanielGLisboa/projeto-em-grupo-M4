@@ -1,26 +1,24 @@
-// import './App.css';
+
 import React from 'react';
-import Headers from './Headers';
+import HeaderHome from "./components/headerComponent/HeaderHome"
 import Footer from './Footer'
+import Home from './components/homeComponent/Home';
 
 
 
 function App() {
   return (
-<div>
-    <header>
-      <Headers />
-    </header> 
-
-    
-
-      {/* corpo da pagina */}
-
-
-   <footer>
-      <Footer />
-    </footer>
-</div>
+    <div>
+      <header>
+        <HeaderHome />
+      </header>
+      <section>
+        < Home />
+      </section>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
 

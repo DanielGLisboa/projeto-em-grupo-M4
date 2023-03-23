@@ -1,7 +1,16 @@
 package com.api.ValdisneiStreaming.model;
 
-import jakarta.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
 @Entity
 @Table(name = "biblioteca")
 public class BibliotecaModel {
@@ -9,35 +18,18 @@ public class BibliotecaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column
-    private String usuario;
-//    @OneToMany
-//    @JoinColumn(name = "biblioteca_playlists")
-//    private List<Playlist> playlists;
-//    //playlists
 
-    //getters and setters
-    public int getId() {
-        return id;
-    }
+    @OneToOne
+    @JoinColumn(name = "email_usuario", referencedColumnName = "email")
+    private UsuarioModel usuario;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name="aux_biblioteca_playlist",
+            joinColumns = @JoinColumn(name="id_biblioteca", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "id_playlist", referencedColumnName = "id")
+    )
+    @JsonIgnoreProperties({"bibliotecas"})
+    private List<PlaylistModel> playlists = new ArrayList<>();
+    //playlists
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-//    public List<Playlist> getPlaylists() {
-//        return playlists;
-//    }
-//
-//    public void setPlaylists(List<Playlist> playlists) {
-//        this.playlists = playlists;
-//    }
 }

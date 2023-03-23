@@ -1,0 +1,30 @@
+.cardplayOneL{
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    min-height: 370px;
+    border-radius: 5%;
+    border-color:linear-gradient( rgb(47, 89, 103), rgb(8, 28, 34));
+    background: linear-gradient( rgb(47, 89, 103), rgb(8, 28, 34));
+
+}
+.legenda{
+    font-size: 30px;
+    color: white;
+}
+.legenda2{
+    font-size: 20px;
+    color: white;
+}
+.cardPlayA{
+    display: flex;      
+    min-width: 290px;
+    min-height: 200px;
+    max-height: 190px;
+    max-width: 250px;
+    
+       
+    border-radius: 5%;
+    padding: 10px;
+    margin-top: 2%;
+}

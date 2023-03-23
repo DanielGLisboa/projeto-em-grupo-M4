@@ -5,13 +5,13 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface UsuarioRepository extends CrudRepository<UsuarioModel, Integer > {
+public interface UsuarioRepository extends CrudRepository<UsuarioModel, String > {
     //Listar
     List<UsuarioModel> findAll();
     //Pesquisar por email
     UsuarioModel findByEmail(String email);
     //Remover
-    void delete(UsuarioModel email);
+    void deleteByEmail(UsuarioModel email);
     //Cadastrar/Alterar
     <Umodel extends UsuarioModel> Umodel save (Umodel email);
 

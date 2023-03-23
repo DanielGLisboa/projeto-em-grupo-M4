@@ -1,0 +1,56 @@
+.CarouselGeral{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 2%;
+       
+
+}
+
+
+/* matriz fica*/
+.cardC{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    justify-content: space-around;
+    width: 80%;
+}
+/* matriz fica*/
+.textoPlaylist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Marvel', sans-serif;;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    color: white;
+    max-width: 70%;
+    margin-left: 15%;
+}
+/* matriz */
+.lateral{
+    padding: 3%;
+}
+/* matriz */
+.input{
+    width: 70%;
+    margin-bottom: 3%;   
+ 
+}
+/* matriz */
+.textplay{
+    margin-bottom: 4%; 
+}
+/* matriz */
+.carrocelfooter{
+
+    display: flex;
+    align-items: center;
+    
+
+    max-width: 100%;
+    min-width: 100%;
+    
+    
+}

@@ -2,8 +2,16 @@ package com.api.ValdisneiStreaming.model;
 
 
 import com.api.ValdisneiStreaming.model.MidiasModel;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
 @Entity
 @Table(name="musica")
 public class MusicaModel extends MidiasModel {
@@ -16,11 +24,8 @@ public class MusicaModel extends MidiasModel {
     private int nota;
 
 
-    public String getArtista() {
-        return artista;
-    }
+    @ManyToMany(mappedBy = "musicas", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonIgnoreProperties({"musicas"})
+    private List<PlaylistModel> playlists = new ArrayList<>();
 
-    public int getNota() {
-        return nota;
-    }
 }

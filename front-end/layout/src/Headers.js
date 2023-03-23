@@ -32,8 +32,7 @@ import {
 	}
 	render() {
 	  return (
-		<div>
-		  <Navbar color="black" dark expand="md">
+		  <Navbar className={styles.navbar} color="black" dark expand="md">
 			<NavbarBrand href="/">
 			<img src={logo} alt="logo" height="30" />
 			</NavbarBrand>
@@ -66,7 +65,6 @@ import {
 			  </Nav>
 			</Collapse>
 		  </Navbar>
-		</div>
 	  );
 	}
   }

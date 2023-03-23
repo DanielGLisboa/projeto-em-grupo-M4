@@ -1,0 +1,30 @@
+.Banner{
+    position: relative;
+    margin: 3rem 3rem 10rem;
+    min-width: 60%;
+    max-width: 95%;
+    min-height: 70vh;
+    border-radius: 0.2rem;
+    background-size: cover;
+    box-shadow: 0px 0px 50px, 0px 0px 40px;
+}
+
+.divCards{
+    position: absolute;
+    bottom: -15%;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2%;
+    opacity: 1;
+    margin-bottom: 40px;
+}
+
+.player:hover{
+    transition: 0.2s;
+    scale: 1.05;
+    opacity: 0.7;
+    cursor: pointer;
+}

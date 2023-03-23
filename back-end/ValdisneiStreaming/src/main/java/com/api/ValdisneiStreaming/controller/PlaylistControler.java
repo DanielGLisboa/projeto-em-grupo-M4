@@ -29,13 +29,19 @@ public class PlaylistControler {
     public @ResponseBody PlaylistModel alterar (@RequestBody PlaylistModel alterar_playlist){return acoes.save(alterar_playlist);}
 
 
-//    @RequestMapping(value="/playlist/{id}", method = RequestMethod.GET)
-//    public @ResponseBody Optional<PlaylistModel> filtrar (@PathVariable int id){return acoes.findById(id);}
+    @RequestMapping(value="/playlist/{id}", method = RequestMethod.GET)
+    public @ResponseBody PlaylistModel filtrar(@PathVariable int id){return acoes.findById(id);}
 
-    @RequestMapping(value="/playlist/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody void deletar(@PathVariable int id){
-        PlaylistModel playlist = acoes.findById(id);
-        this.acoes.delete(playlist);
+    @DeleteMapping("/playlists/{id}")
+    public @ResponseBody String deletar(@PathVariable int id){
+
+        try {
+            PlaylistModel playlist = filtrar(id);
+            acoes.delete(playlist);
+            return "Playlist removida com sucesso.";
+        }catch (Exception error){
+            return "Falha ao remover playlist: " + error.getMessage();
+        }
 
     }
 
