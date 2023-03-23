@@ -12,7 +12,7 @@ import PlayList from './Pages/playListPage/PlayList';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PlayList />
+    <App />
   </React.StrictMode>
 );
 
