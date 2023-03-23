@@ -1,14 +1,8 @@
 /* background image  */
 .plano{
-<<<<<<< HEAD
     background: linear-gradient(rgba(36, 67, 95, 0.37),rgba(8, 33, 41, 0.548)),
     url(../../img/background.png) no-repeat center center fixed;
     height: 90vh;
-=======
-    background: linear-gradient(rgba(47, 89, 103, 0.436),rgba(134, 134, 134, 0.425),rgba(134, 134, 134, 0.414),rgba(47, 89, 103, 0.436)),
-    url(../../img/background.png) no-repeat center center fixed;
-      height: 500px;
->>>>>>> 80ad8f53ee0f55e7837964dbc70d8e7d552e990b
     background-size: 90%;
     position: relative;
   } 
@@ -16,16 +10,10 @@
   .container{
     padding: 20px;
     display: flex;
-<<<<<<< HEAD
     height: 100%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-=======
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
->>>>>>> 80ad8f53ee0f55e7837964dbc70d8e7d552e990b
   }
   /* linha que divide cadastro e login  */
   .cadastro::before{
@@ -38,10 +26,7 @@
     right: -30%;
   }
   .cadastro{
-<<<<<<< HEAD
     
-=======
->>>>>>> 80ad8f53ee0f55e7837964dbc70d8e7d552e990b
     position: relative;
   }
   /* tamanho dos forms  */

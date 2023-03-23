@@ -113,11 +113,7 @@ const CompLogin = () => {
               </FormGroup>
               {/* mensagem de erro caso os inputs estejam vazios ou senhas não confiram  */}
               {error_l && <p style={{ color: 'yellow' }}>{error_l}</p>}
-<<<<<<< HEAD
               <Button href="/Catalogos" onClick={handleLogin} >Entrar</Button>
-=======
-              <Button onClick={handleLogin} >Entrar</Button>
->>>>>>> 80ad8f53ee0f55e7837964dbc70d8e7d552e990b
             </Form>
           </div>
         </div>	
