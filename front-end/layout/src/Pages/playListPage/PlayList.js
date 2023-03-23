@@ -19,15 +19,17 @@ function PlayList() {
        <Carrossel/> 
 
        <div class="textoPlaylist">
-            <div class= "textplay">
-                <h1>Favoritas</h1>
-            </div>
-            <div class= "input">
-                <Form>
-                    <FormGroup>
-                        <Input type="search" name="search" id="exampleSearch" placeholder="search placeholder" />
-                    </FormGroup>
-                </Form>
+            <div>
+                <div class= "textplay">
+                    <h1>Favoritas</h1>
+                </div>
+                <div class= "input">
+                    <Form>
+                        <FormGroup>
+                            <Input type="search" name="search" id="exampleSearch" placeholder="search placeholder" />
+                        </FormGroup>
+                    </Form>
+                </div>
             </div>
             <div class="cardCentral">
 

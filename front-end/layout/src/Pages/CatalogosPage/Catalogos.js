@@ -6,6 +6,7 @@ import styles from "./Catalogos.module.css"
 import BannerMusica from '../../components/BannerMusica/BannerMusica';
 import Card from '../../components/Cards/Card';
 import CardMusica from '../../components/CardsMusica/CardMusica';
+import BannerSerie from "../../components/bannerSerie/BannerSerie";
 
 
 export default function Catalogo() {
@@ -16,31 +17,25 @@ export default function Catalogo() {
     fetch("http://localhost:8090/apivaldisnei/filme")
     .then(response => response.json())
     .then(data => setFilms(data))
-  }, films)
+  }, [])
   
   
+  const [serie, setSerie] = useState([{}])
+  
+  useEffect(()=>{
+    fetch("http://localhost:8090/apivaldisnei/serie")
+    .then(response => response.json())
+    .then(data => setSerie(data))
+  }, [])
 
-    const [series, setSeries] = useState([
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`},
-        {img: `url(https://lh3.googleusercontent.com/-Fzu5QEQ98hM/YYvcfgpoEWI/AAAAAAAAPhI/W1eDcYJ41KcmHOYrvJLt6ArK6mupqNtWwCLcBGAsYHQ/w429-h640/FD1uKE8WUA4vWAE.jpg)`}
-    ])
 
-    const [musicas, setMusicas] = useState([
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`},
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`},
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`},
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`},
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`},
-        {img: `url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`}
-    ])
+  const [musics, setMusics] = useState([{}])
+
+  useEffect(()=>{
+      fetch("http://localhost:8090/apivaldisnei/musica")
+      .then(response => response.json())
+      .then(data => setMusics(data))
+    }, [])
 
   return (
 <div className={styles.content}>
@@ -52,16 +47,16 @@ export default function Catalogo() {
     <div className={styles.maisFilmes}>
             {films.map(film =>{
                 return(
-                <Card  url={film.capa} />
+                <Card id={film.id} url={film.capa} />
                 )
             })}
     </div>
 
-    <BannerHome url={`url(https://quintacapa.com.br/wp-content/uploads/2019/07/ST-netflix-destaque.png)`}/>
+    <BannerSerie url={`url(https://quintacapa.com.br/wp-content/uploads/2019/07/ST-netflix-destaque.png)`}/>
     <div className={styles.maisSeries}>
-    {series.map(series =>{
+    {serie.map(seris =>{
                 return(
-                <Card url={series.img} />
+                <Card  url={seris.capa} />
                 )
             })}
        
@@ -69,9 +64,9 @@ export default function Catalogo() {
 
     <BannerMusica url={`url(https://images.squarespace-cdn.com/content/v1/5bff13aa9d5abbb4e18bd5af/1579124429043-O3AAE97TMK2XZ6UMCJ67/blank.jpg)`}/>
     <div className={styles.maisMusicas}>
-    {musicas.map(musicas =>{
+    {musics.map(musicas =>{
                 return(
-                <CardMusica url={musicas.img} />
+                <CardMusica url={musicas.capa} />
                 )
             })}
     </div>

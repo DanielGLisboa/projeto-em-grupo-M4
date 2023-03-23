@@ -2,7 +2,7 @@ import styles from "./BannerHome.module.css"
 import { useEffect , useState } from "react"
 import Card from "../Cards/Card"
 
-export default function BannerHome({url, urlCard1, urlCard2, urlCard3, urlCard4}){
+export default function BannerHome({url}){
 
     const [films, setFilms] = useState([{}])
 

@@ -1,31 +1,44 @@
 import CardMusica from "../CardsMusica/CardMusica"
 import styles from "./BannerMusica.module.css"
+import { useEffect, useState } from "react"
 
 
 export default function BannerMusica({url}){
+
+    const [musics, setMusics] = useState([{}])
+
+    useEffect(()=>{
+        fetch("http://localhost:8090/apivaldisnei/musica")
+        .then(response => response.json())
+        .then(data => setMusics(data))
+      }, [])
+
+
     return (
         <div className={styles.bannerMusica}>
             <div className={styles.detalhesMusica}>
                 <h1>MÚSICAS</h1>
-                <h2>Pabllo Vittar - Amor de que</h2>
+                <h2>{musics[0].artista}</h2>
                 <h2>*****</h2>
-                <p>3min 15s</p>
+                <p>{musics[0].duracao}</p>
                 <br />
-                <h3>Albúm - Não para Não</h3>
+                <h3>{musics[0].titulo}</h3>
                 <br/>
                 <p>Artista premiada com o Prêmio <br />Multishow de Música Brasileira.</p>
 
 
 
             </div>
-            <div style={{ backgroundImage: url }} className={styles.Banner}>
+            <div style={{ backgroundImage: musics[0].capa }} className={styles.Banner}>
                 <div className={styles.divCards}>
-                    <CardMusica url={`url(https://upload.wikimedia.org/wikipedia/pt/8/83/Capa_de_Dispon%C3%ADvel.png)`}/>
-                    <CardMusica url={`url(https://images.genius.com/ea43889c7d5daf50538343e62f8e58c3.458x458x1.png)`}/>
-                    <CardMusica url={`url(https://1.bp.blogspot.com/-zXYyhsswTk0/VyekHNu5wwI/AAAAAAAAB3E/KEos5s4K3ccRcxoZr8TNIF21DAptyXlTQCLcB/s1600/13083119_820992651338190_8605970979712220891_n.jpg)`}/>
-                    <CardMusica url={`url(https://cdn.iset.io/assets/55268/produtos/35541/quadro-decorativo-led-zeppelin-arte-capa-03.jpg)`}/>
+                    {musics.filter(music => music.id > musics.length - 4).map(mus =>{
+                        return (
+                        <CardMusica url={mus.capa} />
+                        )
+                    })}
                 </div>
             </div>
         </div>
     )
 }
+

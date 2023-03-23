@@ -26,8 +26,8 @@
 .BgBlack{
     position: relative;
     align-self: center;
-    
     width: 800px;
+    background-size: contain;
     background-color: black;
     color: aliceblue;
     border: none;
@@ -47,8 +47,7 @@
 .imgHeaderModal{
     width: 760px;
     height: 390px;
-    background-image: url(https://www.masslive.com/resizer/jtZHY24_FiK5zfGsbaxvr7Ihza0=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/FJIADZXU7VEITMWWKC333GR23A.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
