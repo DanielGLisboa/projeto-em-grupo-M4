@@ -1,0 +1,54 @@
+.modal{
+    width: 800px;
+}
+
+.Information{
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../img/information.svg);
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.Information:hover{
+    transition: 0.2s;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(95, 95, 95, 0.678);
+}
+
+
+
+
+.BgBlack{
+    position: relative;
+    align-self: center;
+    
+    width: 800px;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+}
+
+
+.btnClose{
+    position: relative;
+    left: 96%;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../img/btnClose.svg);
+    background-size: cover;
+}
+
+.imgHeaderModal{
+    width: 760px;
+    height: 390px;
+    background-image: url(https://www.masslive.com/resizer/jtZHY24_FiK5zfGsbaxvr7Ihza0=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/FJIADZXU7VEITMWWKC333GR23A.png);
+    background-size: cover;
+    background-position: center;
+}
+

@@ -32,8 +32,7 @@ import {
 	}
 	render() {
 	  return (
-		<div>
-		  <Navbar color="black" dark expand="md">
+		  <Navbar className={styles.navbar} color="black" dark expand="md">
 			<NavbarBrand href="/">
 			<img src={logo} alt="logo" height="30" />
 			</NavbarBrand>
@@ -41,13 +40,12 @@ import {
 			<Collapse className={styles.navOptions} isOpen={this.state.isOpen} navbar>
 			<Nav className="ml-auto" navbar>
 				<NavItem className={styles.link}>
-				  <NavLink href="/components/">Catálogo</NavLink>
+				  <NavLink href="/catalogos" >Catálogo</NavLink>
 				</NavItem>
 				<NavItem className={styles.link}>
-				  <NavLink href="/components/">Playlists</NavLink>
+				  <NavLink href="/playlists">Playlists</NavLink>
 				</NavItem>
 				<NavItem>
-				<Button className={styles.buttonEntrar}>Entrar</Button>
 				</NavItem>
 				<UncontrolledDropdown nav inNavbar>
 				  <DropdownMenu right>
@@ -66,7 +64,6 @@ import {
 			  </Nav>
 			</Collapse>
 		  </Navbar>
-		</div>
 	  );
 	}
   }

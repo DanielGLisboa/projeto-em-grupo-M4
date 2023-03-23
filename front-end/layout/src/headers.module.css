@@ -1,3 +1,7 @@
+.navbar{
+	height: 6vh;
+}
+
 .navOptions{
 	color: #000000;
 	display: flex;

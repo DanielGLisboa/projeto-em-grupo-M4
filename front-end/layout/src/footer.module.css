@@ -1,11 +1,10 @@
 .navFooter{
-	position: absolute;
-	bottom: 0;
 	width: 100%;
-	padding-top: 15px;
+	height: 4vh;
 	background-color: #000000;
 	display: flex;
 	justify-content: center;
+	
 }
 
 .footerText{

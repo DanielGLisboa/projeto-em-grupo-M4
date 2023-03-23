@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Catalogos from './Pages/CatalogosPage/Catalogos';
+import Login from './Pages/loginPage/Login';
+import Home from "./components/homeComponent/Home";
+import PlayList from './Pages/playListPage/PlayList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
