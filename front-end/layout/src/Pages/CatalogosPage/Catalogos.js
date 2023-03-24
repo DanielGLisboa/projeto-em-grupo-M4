@@ -50,7 +50,6 @@ export default function Catalogo() {
                 return(
                   <>
                   <Card ident={film.capa} url={film.capa} />
-                <ModalInformation  />
                   </>
                 
                 )
