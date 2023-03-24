@@ -1,0 +1,80 @@
+.cardplayOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 350px;
+    min-height: 450px;
+    border-radius: 5%;
+    border-color:linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34));
+    background: linear-gradient( rgb(47, 89, 103), rgb(8, 28, 34)); 
+}
+
+.cardPlay{
+    display: flex;    
+    min-width: 330px;
+    min-height: 200px;
+    max-height: 190px;
+    max-width: 250px;
+    background: linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34)); 
+       
+    border-radius: 5%;
+    padding: 3px;
+    margin-top: 2%;
+}
+.playerBTN{
+    display: flex; 
+    justify-content: space-around;  
+    align-items: center; 
+    min-width: 330px;
+    min-height: 90px;
+    background: linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34));
+    padding: 3px;
+    margin: 1%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+  
+         
+}
+.botaoAnterior{
+    
+   
+    display: inline-block;/*e necessário mudar a caracteristica o display para que eu consiga colocar o tamanho que eu quero no meu botão*/
+    background: linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34));
+    border-radius: 10px;
+    height: 40px; /*definindo altura do botão*/
+    line-height: 20px;/*au utilizar este comando com o mesmo valor da altura nosso elemento fica centralizado*/
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 3px #000000;
+    color: white;
+
+}
+.botaoPlay{
+    
+    display: inline-block;/*e necessário mudar a caracteristica o display para que eu consiga colocar o tamanho que eu quero no meu botão*/
+    background: linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34));
+    border-radius: 10px;
+    height: 40px; /*definindo altura do botão*/
+    line-height: 20px;/*au utilizar este comando com o mesmo valor da altura nosso elemento fica centralizado*/
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 3px #000000;
+    color: white;
+ 
+    
+}
+
+.botaoProxima{
+    
+    display: inline-block;/*e necessário mudar a caracteristica o display para que eu consiga colocar o tamanho que eu quero no meu botão*/
+    background: linear-gradient( rgb(47, 89, 103), rgb(18, 44, 52), rgb(8, 28, 34));
+    border-radius: 10px;
+    height: 40px; /*definindo altura do botão*/
+    line-height: 20px;/*au utilizar este comando com o mesmo valor da altura nosso elemento fica centralizado*/
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 3px #000000;
+    color: white;
+
+}

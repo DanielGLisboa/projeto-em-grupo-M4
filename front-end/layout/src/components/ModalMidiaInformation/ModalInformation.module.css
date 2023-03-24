@@ -1,0 +1,53 @@
+.modal{
+    width: 800px;
+}
+
+.Information{
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../img/information.svg);
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.Information:hover{
+    transition: 0.2s;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(95, 95, 95, 0.678);
+}
+
+
+
+
+.BgBlack{
+    position: relative;
+    align-self: center;
+    width: 800px;
+    background-size: contain;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+}
+
+
+.btnClose{
+    position: relative;
+    left: 96%;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../img/btnClose.svg);
+    background-size: cover;
+}
+
+.imgHeaderModal{
+    width: 760px;
+    height: 390px;
+    background-size: contain;
+    background-position: center;
+}
+
