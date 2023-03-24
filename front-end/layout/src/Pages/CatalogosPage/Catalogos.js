@@ -7,6 +7,7 @@ import BannerMusica from '../../components/BannerMusica/BannerMusica';
 import Card from '../../components/Cards/Card';
 import CardMusica from '../../components/CardsMusica/CardMusica';
 import BannerSerie from "../../components/bannerSerie/BannerSerie";
+import ModalInformation from "../../components/ModalMidiaInformation/ModalInformation";
 
 
 export default function Catalogo() {
@@ -47,14 +48,20 @@ export default function Catalogo() {
     <div className={styles.maisFilmes}>
             {films.map(film =>{
                 return(
-                <Card id={film.id} url={film.capa} />
+                  <>
+                  <Card ident={film.capa} url={film.capa} />
+                <ModalInformation  />
+                  </>
+                
                 )
             })}
     </div>
 
     <BannerSerie url={`url(https://quintacapa.com.br/wp-content/uploads/2019/07/ST-netflix-destaque.png)`}/>
     <div className={styles.maisSeries}>
-    {serie.map(seris =>{
+    {
+    serie.map(seris =>{
+                
                 return(
                 <Card  url={seris.capa} />
                 )
@@ -66,7 +73,11 @@ export default function Catalogo() {
     <div className={styles.maisMusicas}>
     {musics.map(musicas =>{
                 return(
-                <CardMusica url={musicas.capa} />
+                  <>
+                  <CardMusica url={musicas.capa} />
+                  
+                  </>
+                
                 )
             })}
     </div>

@@ -4,20 +4,9 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 function ModalInformation() {
   const [modal, setModal] = useState(false);
-
-  const [films, setFilms] = useState([{}])
-
-  useEffect(()=>{
-      fetch("http://localhost:8090/apivaldisnei/filme")
-      .then(response => response.json())
-      .then(data => setFilms(data))
-    }, [])
-
-  let Midia = films.find(film => film.id == 1)
   
-  function toggle(){
-     console.log(Midia)
-     setModal(!modal)};
+  function toggle(){setModal(!modal)};
+
 
   return (
     <div>
