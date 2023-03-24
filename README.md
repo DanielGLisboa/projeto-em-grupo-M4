@@ -1,5 +1,5 @@
 # :arrow_forward: Streaming Digital
-## Projeto emm grupo do M4 - Resilia <br> <br> ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
+## Projeto em grupo do M4 - Resilia <br> <br> ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
 ![image](https://user-images.githubusercontent.com/120537198/227407063-bbfc99c6-16d0-4d18-8cca-93880f84b94f.png)
 
